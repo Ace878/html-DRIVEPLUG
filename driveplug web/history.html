@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrivePlug- Electric Cars</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #CBE4DE;
+            color: #333;
+            padding-left: 200px;
+        }
+        header {
+            background: #2E4F4F;
+            color: #CBE4DE;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 30px;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: #CBE4DE;
+            text-decoration: none;
+            font-size: 1.5em; /* Adjust icon size */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header nav ul li a:hover {
+            color: #ffffff; /* Change color on hover */
+        }
+      
+
+
+        .left-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #2E4F4F;
+            padding: 20px;
+            width: 160px;
+            height: 100%;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .left-nav .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #CBE4DE;
+            text-align: center;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .left-nav .logo img {
+            width: 60px;
+            height: 60px;
+            margin-top: 10px;
+        }
+
+        .left-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .left-nav ul li {
+            margin-bottom: 20px;
+        }
+
+        .left-nav ul li a {
+            color: #CBE4DE;
+            text-decoration: none;
+            font-size: 1.1em;
+            display: block;
+            padding: 10px;
+            background-color: #2E4F4F;
+            border-radius: 5px;
+        }
+
+        .left-nav ul li a:hover {
+            background-color: #CBE4DE;
+            color: #2E4F4F;
+        }
+
+        .left-nav .arrow {
+            font-size: 2em;
+            color: #2E4F4F;
+            margin-top: 20px;
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+        }
+
+        .title h2 {
+            text-align: center;
+            color: #2E4F4F;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            max-width: 2100px;
+        }
+
+        .history-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 100px auto;
+            padding-left: 200px;
+            max-width: 2100px;
+        }
+
+        .history-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .history-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .history-item h2 {
+            font-size: 1.8em;
+            color: #2E4F4F;
+            margin-bottom: 10px;
+        }
+
+        .history-item p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .history-item img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #2E4F4F;
+            color: #CBE4DE;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding-left: 170px;
+            }
+
+            .left-nav {
+                width: 150px;
+            }
+
+            .vehicle-container {
+                width: calc(50% - 20px); /* Adjust for 2 items per row */
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding-left: 120px;
+            }
+
+            .left-nav {
+                width: 100px;
+            }
+
+            .vehicle-container {
+                width: 100%; /* Adjust for 1 item per row */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left-nav">
+        <div class="logo">
+            <img src="logoos-removebg-preview.png" alt="logo">
+            <samp>DrivePlug</samp>
+        </div>
+        <ul>
+            <li><a href="#2024">2024</a></li>
+            <li><a href="#2020s">2020s</a></li>
+            <li><a href="#2010s">2010s</a></li>
+            <li><a href="#1990s">1990s</a></li>
+            <li><a href="#1900s">1900s</a></li>
+        </ul>
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="HOME.html"><i class="fas fa-home"></i></a></li>
+                <li><a href="HISTORY.html"><i class="fas fa-history"></i></a></li>
+                <li><a href="vehicle.html"><i class="fas fa-car"></i></a></li>
+                <li><a href="ABOUT US.html"><i class="fas fa-info-circle"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2 class="title">HISTORY OF ELECTRIC VEHICLES</h2>
+    <section id="2024">
+        <div class="history-item">
+            <h2>2024: Electric Vehicles Take Over</h2>
+            <h1>Renault Scenic E-Tech</h1>
+            <p>A compact crossover SUV that won the European Car of the Year 2024 award. It offers a range of over 385 miles, with
+                options for 60 kWh and 87 kWh battery capacities.</p>
+            <p>The Renault Scénic Vision concept car, introduced in May 2022, features a unique design with no B-pillar and easy access
+                to the passenger compartment. Built on the CMF-EV platform, it incorporates 70% recycled materials, including a floor
+                made from recycled milk bottles and pipes, and seats crafted from polyester. Inside, it features adjustable screens and
+                camera mirrors. The concept is powered by a 160 kW (210 hp) electric motor and a 40 kWh lithium-ion battery,
+                supplemented by a 15 kW hydrogen fuel cell as a range extender, offering an estimated range of 800 km (500 mi).</p>
+
+            <p>The production model, released in September 2023, is available in two versions: the Standard range with a 60 kWh
+                battery, 125 kW motor, and 420 km range, and the High range with a 160 kW motor, 87 kWh battery, and a range of over 620
+                km.</p>
+            <img src="Renault-Scenic-E-Tech-100-electric.jpeg" alt="Renault Scenic E-Tech">
+        </div>
+    </section>
+    <section id="2020s">
+        <div class="history-item">
+            <h2>2020s: A Global Shift to Electric Vehicles</h2>
+            <p>The 2020s saw a significant shift toward electric vehicles with the rise of major manufacturers like
+                Tesla, Nissan, GM, and Volkswagen pushing for an electric future. The demand for EVs skyrocketed,
+                with government incentives, expansion of charging infrastructure, and better battery technology
+                accelerating the transition.</p>
+            <p>Several countries, including the UK, France, and Norway, have announced plans to phase out the sale
+                of new gasoline and diesel vehicles by 2030-2040. Companies like <strong>Tesla</strong> continue to lead the
+                market with models like <strong>Model 3</strong> and <strong>Model Y</strong>, and the global sales of electric vehicles have
+                surged dramatically.</p>
+            <img src="IBMTorontoSoftwareLabEVChargers4.jpg" alt="Tesla Model 3">
+        </div>
+    </section>
+    <section id="2010s">
+        <div class="history-item">
+            <h2>2010s: Rise of Tesla and Mainstream EVs</h2>
+            <p>The 2010s marked the introduction of electric vehicles for the mass market. Tesla’s success with the
+                <strong>Model S</strong>, the <strong>Nissan Leaf</strong>, and other electric cars set the stage for an EV revolution.
+                Charging infrastructure and battery ranges also improved during this time. Tesla helped to cement
+                the viability of EVs for long-distance travel with the introduction of the <strong>Model S</strong>, which
+                offered a range of over 300 miles on a single charge.</p>
+            <p>Other manufacturers, such as <strong>Chevrolet</strong> and <strong>BMW</strong>, introduced their own electric vehicles, and
+                the market grew significantly. By the end of the decade, electric vehicles were no longer niche
+                products but were seen as a mainstream alternative to gasoline cars.</p>
+            <img src="tesla model s.avif" alt="Tesla Model S">
+        </div>
+    </section>
+    <section id="1990s">
+        <div class="history-item">
+            <h2>1990s: The GM EV1 and California Mandates</h2>
+            <p>The 1990s saw the first major push for electric vehicles with the introduction of the <strong>GM EV1</strong>.
+                Despite its early success, the car was discontinued. However, it paved the way for more electric
+                vehicle development as automakers responded to California's <strong>Zero Emission Vehicle (ZEV)</strong> mandate.
+                The <strong>California Air Resources Board (CARB)</strong> passed regulations requiring automakers to produce
+                zero-emission vehicles, which led to the development of cars like the EV1, which had a range of up
+                to 80 miles per charge.</p>
+            <p>Despite the EV1's popularity among its users, GM eventually discontinued the model due to financial
+                reasons, sparking debates over the future of electric cars. However, this era laid the groundwork
+                for the resurgence of electric cars in the 21st century.</p>
+            <img src="gm1990.jpg" alt="GM EV1">
+        </div>
+    </section>
+    <section id="1900s">
+        <div class="history-item">
+            <h2>1900s: The Golden Age of Electric Vehicles</h2>
+            <p>In the early 1900s, electric cars were quite popular and widely used in cities. They were quieter,
+                cleaner, and easier to operate compared to gasoline-powered vehicles. In fact, in 1900, electric
+                vehicles made up a significant portion of the automobile market. Companies like <strong>Detroit Electric</strong>
+                and <strong>Baker Electric</strong> were major players in the electric vehicle market.</p>
+            <p>The rise of gasoline-powered vehicles, such as the <strong>Ford Model T</strong>, which was cheaper and had a
+                longer driving range, led to the decline of electric cars by the 1920s. However, during this time,
+                electric cars were favored by wealthy individuals and urban areas due to their smooth, silent
+                operation.</p>
+            <img src="OCC7.png" alt="Early Electric Vehicle">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 DrivePlug. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
